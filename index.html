@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zahra Ali Alnoory — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#hero">Zahra<span>.</span></a>
+      <nav class="nav" id="nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#showcase" class="nav-link">3D Showcase</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 class="reveal">Zahra Ali Alnoory</h1>
+          <p class="subtitle reveal">Software Engineer & 3D Artist — building apps, games, and realistic 3D.</p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="#projects">See Projects</a>
+            <a class="btn btn-ghost" href="cv.pdf" target="_blank">Download Resume</a>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <div class="card-inner">
+            <h3>Quick stats</h3>
+            <ul>
+              <li>Game Dev (Unreal / GameMaker)</li>
+              <li>Mobile Apps (React Native)</li>
+              <li>3D Art (Blender / Nomad Sculpt)</li>
+              <li>IoT & Embedded Systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">About</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm Zahra — a software engineer & 3D artist who loves crafting polished user experiences,
+              building mobile apps with React Native, creating games with Unreal Engine and GameMaker, and producing immersive 3D content with Blender and Nomad Sculpt.
+              I work across front-end (HTML/CSS/JS), mobile development, game engines, and IoT embedded systems.
+            </p>
+            <p>
+              I enjoy bringing creative ideas to life through code, 3D modeling, and interactive experiences.
+            </p>
+            <a class="btn btn-outline" href="#contact">Get in touch</a>
+          </div>
+          <div class="about-stats reveal">
+            <div class="stat">
+              <span class="stat-value">5+</span>
+              <span class="stat-label">Years experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">10+</span>
+              <span class="stat-label">Projects (selected)</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">3D</span>
+              <span class="stat-label">Portfolio pieces</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2 class="section-title reveal">Skills</h2>
+        <div class="skills-grid reveal">
+          <div class="skill">
+            <h4>Languages</h4>
+            <p>JavaScript, Python, C++, C</p>
+          </div>
+          <div class="skill">
+            <h4>Frontend</h4>
+            <p>HTML, CSS, JS, React (optional)</p>
+          </div>
+          <div class="skill">
+            <h4>Mobile Development</h4>
+            <p>React Native, JavaScript</p>
+          </div>
+          <div class="skill">
+            <h4>Game Development</h4>
+            <p>Unreal Engine, GameMaker</p>
+          </div>
+          <div class="skill">
+            <h4>3D & Modeling</h4>
+            <p>Blender, Nomad Sculpt, Three.js</p>
+          </div>
+          <div class="skill">
+            <h4>Embedded / IoT</h4>
+            <p>ESP32, ESP8266, IoT Development</p>
+          </div>
+          <div class="skill">
+            <h4>Frontend</h4>
+            <p>HTML, CSS, JavaScript, React</p>
+          </div>
+          <div class="skill">
+            <h4>Backend</h4>
+            <p>Node.js, API Development</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D SHOWCASE -->
+    <section id="showcase" class="section showcase-section">
+      <div class="container">
+        <div class="showcase-header reveal">
+          <h2 class="section-title">Latest 3D Work</h2>
+          <p class="section-subtitle">Explore my latest 3D creation with interactive rotation</p>
+        </div>
+        <div class="showcase-container reveal">
+          <div class="showcase-image-wrapper">
+            <div class="showcase-image-container">
+              <img src="assets/wolf-render.jpg" alt="Latest 3D Work - Wolf Model" class="showcase-image" />
+              <div class="image-overlay">
+                <p>Latest 3D Creation</p>
+              </div>
+            </div>
+            <div class="showcase-info">
+              <h3>Wolf 3D Model</h3>
+              <p>Created with Blender • 3D Character Modeling</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Selected Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <img src="assets/smartwatch.jpg" alt="Smartwatch prototype screenshot" />
+            <div class="project-body">
+              <h3>Smartwatch Attendance Prototype</h3>
+              <p>A student tracking & attendance prototype using a smartwatch: heart-rate, real-time location sharing, and automatic attendance via proximity.</p>
+              <p class="tags">ESP32 · IoT · Prototype</p>
+            </div>
+            <div class="project-actions">
+              <a class="btn-small" href="#">View</a>
+              <a class="btn-small ghost" href="#">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <img src="assets/game.png" alt="Game screenshot" />
+            <div class="project-body">
+              <h3>Platformer Game</h3>
+              <p>A complete platformer game built with GameMaker Studio. Features smooth character movement, level design, and engaging gameplay mechanics.</p>
+              <p class="tags">GameMaker · Game Dev · 2D</p>
+            </div>
+            <div class="project-actions">
+              <a class="btn-small" href="#">Play</a>
+              <a class="btn-small ghost" href="#">Repo</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <img src="assets/tank game.png" alt="3D game screenshot" />
+            <div class="project-body">
+              <h3>3D Game (Three.js)</h3>
+              <p>An interactive 3D game built with JavaScript and Three.js. Features 3D environments, character controls, and immersive gameplay.</p>
+              <p class="tags">Three.js · JavaScript · 3D</p>
+            </div>
+            <div class="project-actions">
+              <a class="btn-small" href="#">Play</a>
+              <a class="btn-small ghost" href="#">Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact-grid">
+        <div class="contact-card reveal">
+          <h2>Contact</h2>
+          <p>Want to collaborate? Email me at <a href="mailto:zahralnoory@gmail.com">zahralnoory@gmail.com</a> or fill the form.</p>
+
+          <form id="contactForm" class="contact-form">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <textarea name="message" rows="5" placeholder="Message" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <p class="form-note">This demo form will show a confirmation but not send an email.</p>
+          </form>
+        </div>
+
+        <div class="contact-info reveal">
+          <h3>Social</h3>
+          <ul class="social-list">
+            <li><a href="#" target="_blank">GitHub</a></li>
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">ArtStation / Behance</a></li>
+          </ul>
+
+          <h3>Location</h3>
+          <p>Bahrain — open to remote opportunities</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Zahra Ali Alnoory — Built with ❤️</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
