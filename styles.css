@@ -791,6 +791,25 @@ body::before {
   font-size:13px;
   margin-top:12px;
   font-style: italic;
+  min-height: 20px;
+  transition: all 0.3s ease;
+}
+
+.form-success {
+  color: #4ade80;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.form-error {
+  color: var(--accent-3);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.contact-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .contact-info h3 {

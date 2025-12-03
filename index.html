@@ -204,21 +204,24 @@
           <h2>Contact</h2>
           <p>Want to collaborate? Email me at <a href="mailto:zahralnoory@gmail.com">zahralnoory@gmail.com</a> or fill the form.</p>
 
-          <form id="contactForm" class="contact-form">
+          <form id="contactForm" class="contact-form" action="https://formsubmit.co/ajax/zahralnoory@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from your portfolio!" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
             <input type="text" name="name" placeholder="Your name" required />
             <input type="email" name="email" placeholder="Your email" required />
             <textarea name="message" rows="5" placeholder="Message" required></textarea>
             <button class="btn btn-primary" type="submit">Send Message</button>
-            <p class="form-note">This demo form will show a confirmation but not send an email.</p>
+            <p id="formStatus" class="form-note"></p>
           </form>
         </div>
 
         <div class="contact-info reveal">
           <h3>Social</h3>
           <ul class="social-list">
-            <li><a href="#" target="_blank">GitHub</a></li>
-            <li><a href="#" target="_blank">LinkedIn</a></li>
-            <li><a href="#" target="_blank">ArtStation / Behance</a></li>
+            <li><a href="https://github.com/0zxxv" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/zahra-ali-alnoory-653049248" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://z0xxv.artstation.com/" target="_blank" rel="noopener noreferrer">ArtStation</a></li>
           </ul>
 
           <h3>Location</h3>

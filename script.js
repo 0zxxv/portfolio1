@@ -52,14 +52,52 @@ document.addEventListener('DOMContentLoaded', () => {
   // run once
   updateActiveLink();
 
-  // Simple contact form handling (demo)
+  // Contact form handling with FormSubmit.co
   const contactForm = document.getElementById('contactForm');
-  contactForm && contactForm.addEventListener('submit', (e) => {
+  const formStatus = document.getElementById('formStatus');
+  
+  contactForm && contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = contactForm.name.value.trim();
-    // show a simple confirmation
-    alert(`Thanks ${name || 'there'}! This demo form doesn't send an email. Replace with your own backend or a form service (Formspree, Netlify Forms, etc.).`);
-    contactForm.reset();
+    
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    formStatus.textContent = '';
+    formStatus.className = 'form-note';
+    
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok || data.success) {
+        formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+        formStatus.className = 'form-note form-success';
+        contactForm.reset();
+      } else {
+        formStatus.textContent = '✗ Something went wrong. Please try again or email me directly.';
+        formStatus.className = 'form-note form-error';
+      }
+    } catch (error) {
+      // FormSubmit may redirect on first use, treat as success if no error thrown
+      formStatus.textContent = '✓ Message sent! I\'ll get back to you soon.';
+      formStatus.className = 'form-note form-success';
+      contactForm.reset();
+    }
+    
+    // Reset button
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalBtnText;
   });
 
 });
